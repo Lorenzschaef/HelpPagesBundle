@@ -24,7 +24,9 @@ Step 2: Enable the Bundle
 -------------------------
 
 Then, enable the bundle by adding it to the list of registered bundles
-in the `app/AppKernel.php` file of your project:
+in the `app/AppKernel.php` file of your project.
+
+The bundle depends on the KnpMarkdownBundle, so you have to register that as well, if you haven't already.
 
 ```php
 <?php
@@ -37,7 +39,7 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             // ...
-
+            new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
             new Lorenzschaef\HelpPagesBundle\LorenzschaefHelpPagesBundle(),
         );
 
@@ -60,10 +62,21 @@ help_pages:
     prefix: /help
 ```
 
-Step 4: Change the directory where you store your markdown files (optional)
+Step 4: Add the Bundle to the Assetic Configuration
+---------------------------------------------------
+
+In your app/config/config.yml add the Bundle to the Assetic config.
+
+```yml
+assetic:
+    bundles:        [AppBundle, LorenzschaefHelpPagesBundle, ...]
+
+```
+
+Step 4: Change the Base Directory (optional)
 ---------------------------------------------------------------------------
 
-By default, the bundle looks for your Help Pages in app/Resources/HelpPages. You can change this in your config like this:
+By default, the bundle looks for your Help Pages in app/Resources/HelpPages. You can change this in your config like so:
 
 
 ```yml
@@ -100,6 +113,8 @@ http:://www.example.com/help/basics                     <- This displays the ind
 http:://www.example.com/help/basics/accountcreation
 http:://www.example.com/help/basics/profile
 ```
+
+The menu generator looks for the first level one title of each document to display it as the link text. Currently only the syntax with the hash (#) is supported. If it can't find any level 1 title in the document, it will use the string "Untitled".
 
 Change the Appearance
 ---------------------
