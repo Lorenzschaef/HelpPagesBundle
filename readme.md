@@ -124,5 +124,5 @@ The original templates are located in the bundle folder under Resources/view.
 - layout.html.twig: defines the general layout.
 - toc.html.twig: defines a twig macro that renders the table of contents which is used in layout.html.twig
 
-In order to override one of these, just put a template with the same name in app/Resources/LorenzschaefHelpPagesBundle/view.
+In order to override one of these, just put a template with the same name in app/Resources/LorenzschaefHelpPagesBundle/views.
 
