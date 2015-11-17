@@ -1,0 +1,62 @@
+body{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#help-page-toc{
+	width: 250px;
+	float: left;
+	border-right: 1px solid silver;
+	margin-top: 2em;
+	padding: 1em;
+	padding-left: 2em;
+	color: #556;
+}
+
+#help-page-toc ol{
+	list-style-position: outside;
+	padding-left: 1em;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#help-page-toc ol li{
+	padding: 8px 0;
+}
+
+#help-page-toc ol li a{
+	text-decoration: none;
+	color: #556;
+}
+
+#help-page-toc ol li a:active{
+	color: green;
+}
+
+#help-page-toc ol li a:hover{
+	color: black;
+}
+
+
+#help-page-toc ol ol{
+	font-weight: normal;
+}
+
+#help-page-toc ol ol li{
+	padding: 4px 0;
+}
+
+
+
+
+#help-page-content{
+	margin-left: 320px;
+	padding: 1em;
+	padding-right: 2em;
+	line-height: 1.5;
+}
+
+#help-page-content h1, h2, h3, h4, h5{
+	margin-top: 2em;
+}
+
+

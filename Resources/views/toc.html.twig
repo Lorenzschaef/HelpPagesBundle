@@ -1,0 +1,13 @@
+
+{% macro renderOl(tocData) %}
+	<ol>
+		{% for item in tocData %}
+			<li>
+				<a href="{{ path('help_page_bundle_show', {path: item.path}) }}">{{ item.title }}</a>
+				{% if item.subpages is defined %}
+					{{ _self.renderOl(item.subpages) }}
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ol>
+{% endmacro %}

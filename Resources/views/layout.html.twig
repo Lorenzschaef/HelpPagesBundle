@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% import 'LorenzschaefHelpPagesBundle::toc.html.twig' as toc %}
+
+{% block body %}
+	
+	<div id="help-page-toc">
+		{{ toc.renderOl(tocData) }}
+	</div>
+	
+	<div id="help-page-content">
+	{{ content|raw }}
+	</div>
+	
+{% endblock %}
+
+{% block stylesheets %}
+	{% stylesheets 'bundles/lorenzschaefhelppages/css/default.css' 
+					filter='cssrewrite' %}
+	
+    	<link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+{% endblock %}
