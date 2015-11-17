@@ -1,5 +1,5 @@
 {
-    "name": "Lorenzschaef/HelpPagesBundle",
+    "name": "lorenzschaef/help-pages-bundle",
     "type": "symfony-bundle",
     "description": "This Bundle provides a simple way of including end user documentation in your application.",
     "keywords": ["help", "documentation"],
