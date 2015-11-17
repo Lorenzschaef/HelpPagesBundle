@@ -119,7 +119,7 @@ The menu generator looks for the first level one title of each document to displ
 Change the Appearance
 ---------------------
 
-The original templates are located in the bundle folder under Resources/view.
+The original templates are located in the bundle folder under Resources/views.
 
 - layout.html.twig: defines the general layout.
 - toc.html.twig: defines a twig macro that renders the table of contents which is used in layout.html.twig
