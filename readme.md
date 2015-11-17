@@ -81,18 +81,18 @@ Usage
 Add your Documents
 ------------------
 
-Put your Help Pages in the configured folder (app/Resources/HelpPages by default). The files have to end with .md and can be organized in subfolders. To define the sorting order, you my prepend a number followed by an underscore to the filename.
+Put your Help Pages in the configured folder (app/Resources/HelpPages by default). The files have to end with .md and can be organized in subfolders. To define the sorting order, you may prepend a number followed by an underscore to the filename.
 
 ```
-- 01_gettingstarted.md
-- 02_basics
-  |- index.md
-  |- 01_accountcreation.md
-  |- 02_profile.md
+|- 01_gettingstarted.md
+|- 02_basics
+    |- index.md
+    |- 01_accountcreation.md
+    |- 02_profile.md
   ...
 ```
 
-These pages can the be accessed with these routes:
+These pages can then be accessed through the following URLs:
 
 ```
 http:://www.example.com/help/gettingstarted

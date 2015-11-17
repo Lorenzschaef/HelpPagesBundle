@@ -4,7 +4,6 @@ namespace Lorenzschaef\HelpPagesBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-//use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -12,6 +11,8 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class HelpPagesController extends Controller
 {
 	/**
+	 * Displays a Help Page
+	 *
 	 * @Route("/{path}", defaults={"path": ""}, requirements={"path": ".*"}, name="help_page_bundle_show")
 	 */
 	public function indexAction($path)
@@ -22,8 +23,7 @@ class HelpPagesController extends Controller
 		if(!is_dir($basedir)) throw new HttpException(500, 'Basedir not found');
 		
 		
-		//$basedir = $this->get('kernel')->getRootDir().'/Resources/HelpPages';
-
+		// 
 		$fileInfo = $this->get("lorenzschaef_help_pages.help_pages")->getFileInfo($path, $basedir);
 		if($fileInfo === false){
 			$msg = 'The Help Page "'.$path.'" could not be found';
@@ -42,11 +42,4 @@ class HelpPagesController extends Controller
 		return $this->render('LorenzschaefHelpPagesBundle::layout.html.twig', ['content' => $content, 'tocData' => $tocData]);
 		
 	}
-	
-	
-	
-	public function renderMenu($path = "/"){
-		
-	}
-	
 }
