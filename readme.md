@@ -13,7 +13,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```bash
-$ composer require Lorenzschaef/HelpPagesBundle "~1"
+$ composer require lorenzschaef/help-pages-bundle "~1"
 ```
 
 This command requires you to have Composer installed globally, as explained

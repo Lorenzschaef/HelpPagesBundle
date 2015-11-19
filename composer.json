@@ -1,8 +1,8 @@
 {
     "name": "lorenzschaef/help-pages-bundle",
     "type": "symfony-bundle",
-    "description": "This Bundle provides a simple way of including end user documentation in your application.",
-    "keywords": ["help", "documentation"],
+    "description": "This Bundle provides a simple way of including end user documentation in your Symfony application.",
+    "keywords": ["symfony", "help", "documentation"],
     "license": "MIT",
     "authors": [
         {
